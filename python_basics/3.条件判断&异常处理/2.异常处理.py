@@ -1,5 +1,18 @@
 # 异常处理
 # 希望让程序正常的执行，遇到了异常也不停止。
+# 常见的异常提示：
+# 异常名称                      描述
+# AttributeError            对象没有这个属性
+# OSError                   操作系统错误
+# ImportError               导入模块/对象失败
+# IndexError                序列中没有此索引(index)
+# KeyError                  没有这个键
+# NameError                 未声明/初始化对象 (没有属性)
+# yntaxError                Python 语法错误
+# TypeError                 对类型无效的操作
+# ValueError                传入无效的参数
+# Warning                   警告的基类
+
 
 num_1 = 100
 
