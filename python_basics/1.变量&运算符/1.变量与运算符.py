@@ -40,8 +40,6 @@ print(id(name_3))
 
 # 此时没有变量名指向韩信，python的垃圾回收机制，过了一段时间会释放"韩信"(删除)
 name_1 = name_2 = name_3 = "企鹅"
-
-
 print(name_1)
 print(name_2)
 
@@ -115,9 +113,6 @@ print(a != b)
 # or: 什么或什么(有一个为真，就为真)
 # not：不是什么(取反)
 
-g = 100
-z = 200
-q = 300
 
 print(a != b and a != c)    # 两个表达式都为真，即为真
 print(a == b or a == c)     # 两个表达式都为假，即为假

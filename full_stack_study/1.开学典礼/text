@@ -1,0 +1,18 @@
+1、安装python
+    --勾选ADD python。。to path
+    --选择安装的路径
+
+2、安装pycharm
+    --选择解释器
+        --file--settings-
+
+3、快捷键
+    ctrl + d 快速复制光标所在这一行
+    ctrl + /  选中的代码快速注释或取消
+
+4、语法
+    所有的符号，必须按照英文状态输入
+
+5、格式化代码
+    按照一定的格式，输出代码
+    code -reformat code  ctrl + alt

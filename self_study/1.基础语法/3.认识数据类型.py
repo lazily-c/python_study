@@ -15,7 +15,7 @@ print(type(num2))
 a = "hello world"
 print(type(a))
 
-# bool -- 布尔型. 通常判断使用. 布尔型有两个取值true和false
+# bool -- 布尔型. 通常判断使用. 布尔型有两个取值True和False
 b = True
 print(type(b))
 
