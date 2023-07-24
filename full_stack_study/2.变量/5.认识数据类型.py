@@ -18,6 +18,7 @@ print(type(num_2))
 # 3、字符串类型  str
 val_1 = 'hello world'
 val_2 = "你好世界"
+val_3 = """你好世界"""
 print(type(val_1))
 print(type(val_2))
 
