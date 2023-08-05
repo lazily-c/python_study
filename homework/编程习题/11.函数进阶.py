@@ -5,7 +5,7 @@
 # 定义
 def feibolaqi(n):
     if n <= 1:
-        return n
+        return 1
     else:
         # 计算公式
         return feibolaqi(n-1) + feibolaqi(n-2)

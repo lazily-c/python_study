@@ -14,12 +14,12 @@
 提示：删除信息可以根据id删除
 """
 
-class Student_Management_System():
-
-
-    def add_message(self):
-        pass
-
-    def delete_message(self):
-        pass
+# class Student_Management_System():
+#
+#
+#     def add_message(self):
+#         pass
+#
+#     def delete_message(self):
+#         pass
 
