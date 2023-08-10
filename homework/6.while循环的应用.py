@@ -11,7 +11,7 @@ while day <= 10:    # 1 2 3 4 5 6 7 8 9 10
     # 进行格式化输出，第几天道歉
     print(f"今天是第{day}天，道歉")
 
-    # 买鲜花的次数
+    # 记录买鲜花的次数
     flower_count = 1
 
     while flower_count <= 3:
