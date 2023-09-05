@@ -3,14 +3,16 @@
 # 需求：这辆汽车往返共行驶了多少公里
 
 
-def total_distance(x):
-    t = 8
-    d1 = x * t
-    d2 = (x-12)*1.5*8
-    d = d1 + d2
-    return d
+# num代表从山区开往城市的时间
+for num in range(1, 21):     # 使用循环的方式，得出具体花费的时间
+    # 当满足城区开往山区的时间时候花的时间，是开往城区的时间1.5倍，执行下面程序
+    if num + int(num * 1.5) == 20:
+        print(f"开往城区的时间：{num}小时, 城区开往山区的时间：{20-num}小时")
 
-if __name__=="__main__":
-    x = float(input("请输入汽车的行使速度："))
-    distance = total_distance(x)
-    print("这辆汽车往返共行驶了%.2f公里" % distance)
+# 山区开往城区的时间：8小时, 城区开往山区的时间：12小时
+num = 0    # num代表距离
+while True:
+    # 山区开往城市的速度 - 城市开往山区的速度  = 12
+    if num/8 - num / 12 == 12:      # 当num满足这个条件执行下面程序
+        print("这辆汽车往返共行驶了%d公里" % (num * 2))
+    num += 1     # 循环结束的出口

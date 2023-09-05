@@ -31,10 +31,10 @@ input1 = [1, 2, 3, 4, 5]
 output1 = func(input1)
 print(output1)  # 输出: [1, 5, 2, 4, 3]
 
-input2 = [1, 2, 3, 4, 5, 6]
-output2 = func(input2)
-print(output2)  # 输出: [1, 6, 2, 5, 3, 4]
-
-input3 = ["张三", "李四", "王五"]
-output3 = func(input3)
-print(output3)
+# input2 = [1, 2, 3, 4, 5, 6]
+# output2 = func(input2)
+# print(output2)  # 输出: [1, 6, 2, 5, 3, 4]
+#
+# input3 = ["张三", "李四", "王五"]
+# output3 = func(input3)
+# print(output3)
