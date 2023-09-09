@@ -15,9 +15,10 @@ def reverse_groups(num_list, result):
         modified_list.extend(group[::-1])
     return modified_list
 
+
 # 示例测试
 input1 = [1, 2, 3, 4, 5]
-output1 = reverse_groups(input1, 3)
+output1 = reverse_groups(input1, 5)
 print(output1)  # 输出: [3, 2, 1, 4, 5]
 
 input2 = [1, 2, 3, 4, 5]

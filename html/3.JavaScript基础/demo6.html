@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>运算符</title>
+</head>
+<body>
+<script>
+    /*
+    var num_one = 10
+    // document.write(++num_one)
+    document.write(num_one++)     //输出10
+    document.write(num_one)       //输出11
+    */
+
+    // 条件判断
+    var year = 2023;
+    // 闰年可以被400整除，也可以被4整除，但不能被100整除
+    if ((year % 400 == 0) || (year % 100 != 0) && (year % 4 == 0)) {
+        //条件满足执行的代码
+        console.log(year + " 年是闰年。");
+    } else {
+        console.log(year + " 年不是润年。");
+    }
+</script>
+</body>
+</html>
