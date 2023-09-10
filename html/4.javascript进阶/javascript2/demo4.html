@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>必填字段验证</title>
+    <style>
+        .error {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+<form onsubmit="return validataForm()" method="post" action="">
+    <fieldset style="text-align: center; width: 300px; position: relative; background-color: pink">
+        <legend>注册</legend>
+        <div class="row">
+            <label>账&emsp;号: </label>
+            <input type="text" name="name">
+            <span class="error" id="nameErr"></span>
+        </div>
+        <div class="row">
+            <label>密&emsp;码: </label>
+            <input type="password" name="pwd">
+            <span class="error" id="pwdErr"></span>
+        </div>
+        <div class="row">
+            <label>邮&emsp;箱: </label>
+            <input type="text" name="email">
+            <span class="error" id="emailErr"></span>
+        </div>
+        <div class="row">
+            <label>电&emsp;话: </label>
+            <input type="text" name="mobile" maxlength="11">
+            <span class="error" id="mobileErr"></span>
+        </div>
+        <div class="row">
+            <label>验证码: </label>
+            <input type="text" name="captcha" maxlength="4" style="width: 120px">
+            <span id="captcha" onclick="getCaptcha()"></span>
+            <span class="error" id="captchaErr"></span>
+        </div>
+        <div class="row">
+            <input type="submit" value="注册">
+            <input type="reset" value="重置">
+        </div>
+    </fieldset>
+</form>
+
+<script>
+    //生成验证码
+    var captcha = getCaptcha();
+
+    //获取验证码
+    function getCaptcha() {
+        var cap = Math.floor(Math.random() * 10000).toString();
+        if (cap.length != 4) {
+            cap += "0";
+            captcha = cap
+        }
+        document.getElementById("captcha").innerHTML = cap;
+    }
+
+    //验证错误信息
+    function printError(elemId, hinMsg) {
+        document.getElementById(elemId).innerHTML = hinMsg
+    }
+
+    //验证表单的数据
+    function validataForm() {
+        //获取表单元素的值
+        var name = document.querySelector("input[name  = 'name']").value;
+        var pwd = document.querySelector("input[name  = 'pwd']").value;
+        var email = document.querySelector("input[name = 'email']").value;
+        var mobile = document.querySelector("input[name= 'mobile']").value;
+        var captcha = document.querySelector("input[name = 'captcha']").value;
+        if (name == "" || name == null) {
+            printError("nameErr", "用户名不能为空");
+            return false;
+        }
+        if (pwd == "" || pwd == null) {
+            printError("pwdErr", "密码不能为空");
+            return false;
+        }
+        if (email == "" || email == null) {
+            printError("emailErr", "邮箱不能为空");
+            return false;
+        }
+        if (mobile == "" || mobile == null) {
+            printError("mobileErr", "手机号不能为空");
+            return false;
+        }
+        if (captcha == "" || captcha == null) {
+            printError("captchaErr", "用户名不能为空");
+            return false;
+        }
+// 清空 input 标签后的提示信息
+        var tags = document.getElementsByTagName('input');
+        for (var i = 0; i < tags.length; i++) {
+            //元素内容发生改变触发onchange事件
+            tags[i].onchange = function () {
+                //this.name 获取标签的name属性
+                var idname = this.name + "Err";
+                document.getElementById(idname).innerHTML = '';
+            }
+        }
+    }
+</script>
+</body>
+</html>
