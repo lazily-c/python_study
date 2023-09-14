@@ -1,7 +1,8 @@
 # -*- coding:utf-8 -*-
 import requests
 
-class Novel_Data(object):
+
+class NovelData(object):
     def __init__(self):
         self.url = "https://www.17k.com/all/book/2_0_0_0_0_0_0_0_{}.html"
         self.headers = {
@@ -28,10 +29,9 @@ class Novel_Data(object):
     # 将html数据存储在html文件当中
     def write_html_data(self, response, index):
         file_name = f"第{index}页的数据.html"
-        with open("./17k/" + file_name, "a") as file:
+        with open("./17k/" + file_name, "a", encoding="utf-8") as file:
             file.write(response)
             print(f"第{index}页的数据保存成功")
-
 
     # 实现整个代码的业务逻辑
     def main(self):
@@ -43,5 +43,5 @@ class Novel_Data(object):
 
 
 if __name__ == '__main__':
-    novel = Novel_Data()
+    novel = NovelData()
     novel.main()
